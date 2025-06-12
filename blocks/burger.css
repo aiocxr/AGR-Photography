@@ -1,0 +1,30 @@
+/* main burger icon  */
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 5px;
+}
+
+/* every line style  */
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+/* these lines below will be used for animation */
+
+.line1 {
+}
+
+.line2 {
+}
+
+.line3 {
+}

@@ -1,0 +1,63 @@
+.navbar {
+  width: 100%;
+  background: #435161;
+  display: flex;
+}
+
+.logo-img {
+  width: 1rem;
+  height: auto;
+  background-color: black;
+}
+
+.nav-links {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+  text-decoration: none;
+  width: 100%;
+  justify-content: end;
+  padding: 1rem 5rem 0px 0px;
+  font-family: "lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+.nav-item {
+}
+
+.nav-link {
+  font-family: "lato", Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  text-decoration: none;
+  background-image: linear-gradient(to right, white, white 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:before {
+  content: "";
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background-position: 0;
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
