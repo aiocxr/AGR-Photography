@@ -1,13 +1,14 @@
 .navbar {
   width: 100%;
-  background: #435161;
+  background: #4300ff;
   display: flex;
 }
 
 .logo-img {
-  width: 1rem;
+  width: 110px;
   height: auto;
-  background-color: black;
+  background: transparent;
+  padding: 10px 30px;
 }
 
 .nav-links {
@@ -17,10 +18,12 @@
   text-decoration: none;
   width: 100%;
   justify-content: end;
-  padding: 1rem 5rem 0px 0px;
+  align-items: center;
   font-family: "lato", Arial, Helvetica, sans-serif;
   font-weight: 300;
   font-size: 1rem;
+  margin: 0;
+  padding: 0px 100px 0px 0px;
 }
 
 .nav-item {
@@ -44,7 +47,7 @@
 
 .nav-link:before {
   content: "";
-  background: #54b3d6;
+  background: #ff1616;
   display: block;
   position: absolute;
   bottom: -3px;
