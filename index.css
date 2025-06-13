@@ -3,7 +3,7 @@
 @import "./blocks/header.css";
 @import "./blocks/slideshow.css";
 @import "./blocks/burger.css";
-@import "/blocks/form.css";
+@import "./blocks/form.css";
 
 .pricing__section {
   position: relative;
