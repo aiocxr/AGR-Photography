@@ -25,21 +25,32 @@
   z-index: 1;
 }
 
-/* Position overrides */
-.slide[data-position="center"] {
-  object-position: center center;
+.slide--dafne {
+  transform: translate(-49%, -46%);
 }
 
-.slide[data-position="bottom"] {
-  object-position: center bottom;
+.slide--chris {
+  transform: translate(-50%, -50%);
 }
 
-/* If you want different positioning per screen size, you can use media queries like */
+.slide--gabby {
+  transform: translate(-51%, -50%);
+}
 
-@media (max-width: 768px) {
-  .slide[data-position="top"] {
-    object-position: center 10%;
+@media screen and (max-width: 768px) {
+  .slideshow {
+    height: 70vh;
+  }
+
+  .slide--dafne {
+    transform: translate(-47%, -47%);
+  }
+
+  .slide--chris {
+    transform: translate(-70%, -55%);
+  }
+
+  .slide--gabby {
+    transform: translate(-47%, -54%);
   }
 }
-
-/* you can use .logo for flexbility (e.g. layout $ spacing) */

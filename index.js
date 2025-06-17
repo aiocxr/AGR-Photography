@@ -2,17 +2,17 @@ const slideData = [
   {
     src: "./images/dafne.JPG",
     alt: "Dafne",
-    position: "center",
+    className: "slide--dafne",
   },
   {
     src: "./images/chris-front-truck-pose.JPG",
     alt: "Chris",
-    position: "bottom",
+    className: "slide--chris",
   },
   {
     src: "./images/gabby-sitting-graduation.JPG",
-    alt: "Sydney",
-    position: "bottom",
+    alt: "Gabby",
+    className: "slide--gabby",
   },
 ];
 
@@ -24,10 +24,27 @@ const slides = [];
 slideData.forEach((data, index) => {
   const slideshowTemplateClone = slideshowTemplate.content.cloneNode(true);
   const homeSlideshowImg = slideshowTemplateClone.querySelector(".slide");
+
   homeSlideshowImg.src = data.src;
   homeSlideshowImg.alt = data.alt;
-  homeSlideshowImg.dataset.position = data.position;
-  if (index === 0) homeSlideshowImg.classList.add("active");
+
+  // Optional: error handling
+  homeSlideshowImg.onerror = () => {
+    console.warn(`Failed to load image: ${data.src}`);
+    homeSlideshowImg.alt = "Image failed to load";
+    homeSlideshowImg.style.opacity = 0.5;
+  };
+
+  // First slide gets active class
+  if (index === 0) {
+    homeSlideshowImg.classList.add("active");
+  }
+
+  // ✅ Add custom class if provided
+  if (data.className) {
+    homeSlideshowImg.classList.add(data.className);
+  }
+
   slideshowContainer.appendChild(slideshowTemplateClone);
   slides.push(homeSlideshowImg);
 });
@@ -44,22 +61,3 @@ setInterval(() => {
   // Add active to new current
   slides[currentIndex].classList.add("active");
 }, 3000); // Change every 3 seconds
-
-const button = document.querySelector(".submit__btn");
-
-button.addEventListener("click", function (e) {
-  e.preventDefault(); // prevent actual form submit for demo
-
-  // Add active and finished classes to trigger animation
-  button.classList.add("active");
-
-  // After the fill animation duration, add 'finished'
-  setTimeout(() => {
-    button.classList.add("finished");
-  }, 800); // matches your CSS transition duration on ::before width
-
-  // After 2 seconds total, reset classes to original state
-  setTimeout(() => {
-    button.classList.remove("active", "finished");
-  }, 2000);
-});
