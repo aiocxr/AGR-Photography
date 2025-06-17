@@ -1,16 +1,16 @@
 const slideData = [
   {
-    src: "../images/dafne.jpg",
+    src: "./images/dafne.JPG",
     alt: "Dafne",
     position: "center",
   },
   {
-    src: "../images/chris-front-truck-pose.jpg",
+    src: "./images/chris-front-truck-pose.JPG",
     alt: "Chris",
     position: "bottom",
   },
   {
-    src: "../images/gabby-sitting-graduation.JPG",
+    src: "./images/gabby-sitting-graduation.JPG",
     alt: "Sydney",
     position: "bottom",
   },
