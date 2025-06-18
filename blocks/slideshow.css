@@ -37,7 +37,7 @@
   transform: translate(-51%, -50%);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .slideshow {
     height: 70vh;
   }
