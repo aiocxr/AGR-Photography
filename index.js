@@ -5,7 +5,7 @@ const slideData = [
     className: "slide--dafne",
   },
   {
-    src: "./images/chris-front-truck-pose.JPG",
+    src: "./images/chris-ashly-truck.JPG",
     alt: "Chris",
     className: "slide--chris",
   },
@@ -61,3 +61,9 @@ setInterval(() => {
   // Add active to new current
   slides[currentIndex].classList.add("active");
 }, 3000); // Change every 3 seconds
+
+const burger = document.querySelector(".burger");
+
+burger.addEventListener("click", () => {
+  burger.classList.toggle("active");
+});

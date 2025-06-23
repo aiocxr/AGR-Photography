@@ -76,4 +76,8 @@
     flex-direction: column;
     display: none;
   }
+
+  .logo-img {
+    width: 80px;
+  }
 }
