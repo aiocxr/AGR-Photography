@@ -3,25 +3,47 @@
   padding: 0;
 }
 
+.nav__controls {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media screen and (max-width: 425px) {
   .burger {
     width: 40px;
-    height: 37px;
+    height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    cursor: pointer;
-    background-color: transparent;
+    align-items: center;
+    background: transparent;
     border: none;
-    margin: 0px 35px 0px 0px;
+    cursor: pointer;
+    padding: 0;
+    z-index: 3;
+    margin: 0px 30px 0px 0px;
   }
 
   .burger__line {
     width: 100%;
-    height: 5px;
-    background-color: white;
+    height: 3px;
+    background-color: #fff;
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     transform-origin: center;
+  }
+
+  /* Burger active state: animate into X */
+  .burger.active .line-top {
+    transform: rotate(45deg) translateY(9px);
+  }
+
+  .burger.active .line-middle {
+    opacity: 0;
+  }
+
+  .burger.active .line-bottom {
+    transform: rotate(-45deg) translateY(-9px);
   }
 }

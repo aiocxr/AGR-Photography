@@ -61,9 +61,15 @@ setInterval(() => {
   // Add active to new current
   slides[currentIndex].classList.add("active");
 }, 3000); // Change every 3 seconds
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.getElementById("burger");
+  const navLinks = document.querySelector(".nav-links");
 
-const burger = document.querySelector(".burger");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navLinks.classList.toggle("active");
 
-burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
+    const expanded = burger.getAttribute("aria-expanded") === "true";
+    burger.setAttribute("aria-expanded", String(!expanded));
+  });
 });
