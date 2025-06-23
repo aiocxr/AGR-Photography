@@ -80,12 +80,10 @@
     padding: 0;
     flex-direction: column;
     background-color: black;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: 0;
     padding: 0;
     z-index: 2;
     transform: translateX(100%);
