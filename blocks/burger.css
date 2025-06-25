@@ -32,7 +32,6 @@
     background-color: #fff;
     border-radius: 2px;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    transform-origin: center;
   }
 
   .burger.burger__isactive .burger__line-top {
