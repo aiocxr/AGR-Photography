@@ -1,14 +1,13 @@
-/* this fills the header with the background image slideshow */
-
 .slideshow {
   width: 100%;
   height: 100vh; /* Full screen height */
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
 .slide {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   width: auto;
@@ -18,6 +17,7 @@
   object-position: center center;
   opacity: 0;
   transition: opacity 1s ease-in-out;
+  z-index: 1;
 }
 
 .slide--dafne {
@@ -32,7 +32,7 @@
   transform: translate(-51%, -50%);
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .slideshow {
     height: 70vh;
   }
@@ -42,7 +42,7 @@
   }
 
   .slide--chris {
-    transform: translate(-52%, -55%);
+    transform: translate(-47%, -55%);
   }
 
   .slide--gabby {
