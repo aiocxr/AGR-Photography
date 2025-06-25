@@ -1,0 +1,17 @@
+.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.form__isactive {
+  opacity: 1;
+}
+
+.burger__isactive {
+  opacity: 1;
+  z-index: 2;
+}
+
+.slideshow__isactive {
+  opacity: 1;
+}

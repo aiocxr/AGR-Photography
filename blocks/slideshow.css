@@ -20,11 +20,6 @@
   transition: opacity 1s ease-in-out;
 }
 
-.active {
-  opacity: 1;
-  z-index: 1;
-}
-
 .slide--dafne {
   transform: translate(-49%, -46%);
 }

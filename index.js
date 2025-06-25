@@ -28,16 +28,9 @@ slideData.forEach((data, index) => {
   homeSlideshowImg.src = data.src;
   homeSlideshowImg.alt = data.alt;
 
-  // Optional: error handling
-  homeSlideshowImg.onerror = () => {
-    console.warn(`Failed to load image: ${data.src}`);
-    homeSlideshowImg.alt = "Image failed to load";
-    homeSlideshowImg.style.opacity = 0.5;
-  };
-
   // First slide gets active class
   if (index === 0) {
-    homeSlideshowImg.classList.add("active");
+    homeSlideshowImg.classList.add("slideshow__isactive");
   }
 
   // ✅ Add custom class if provided
@@ -53,17 +46,17 @@ let currentIndex = 0;
 
 setInterval(() => {
   // Remove active from current
-  slides[currentIndex].classList.remove("active");
+  slides[currentIndex].classList.remove("slideshow__isactive");
 
   // Move to next index, wrap around
   currentIndex = (currentIndex + 1) % slides.length;
 
   // Add active to new current
-  slides[currentIndex].classList.add("active");
+  slides[currentIndex].classList.add("slideshow__isactive");
 }, 3000); // Change every 3 seconds
 
 const burger = document.querySelector(".burger");
 
 burger.addEventListener("click", () => {
-  burger.classList.toggle("active");
+  burger.classList.toggle("burger__isactive");
 });

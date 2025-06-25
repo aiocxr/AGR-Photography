@@ -3,8 +3,9 @@
   padding: 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 560px) {
   .burger {
+    position: relative;
     width: 40px;
     height: 37px;
     display: flex;
@@ -24,4 +25,24 @@
     transition: all 0.3s ease;
     transform-origin: center;
   }
+
+  .burger.burger__isactive .burger__line-top {
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 50%;
+  }
+
+  .burger.burger__isactive .burger__line-middle {
+    opacity: 0;
+    position: absolute;
+    bottom: 50%;
+  }
+
+  .burger.burger__isactive .burger__line-bottom {
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: 50%;
+  }
 }
+
+/* we need to animate the burger lines to transition and transfrom into an "X" */
