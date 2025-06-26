@@ -56,7 +56,9 @@ setInterval(() => {
 }, 3000); // Change every 3 seconds
 
 const burger = document.querySelector(".burger");
+const navLinks = document.querySelector(".nav-links");
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("burger__isactive");
+  navLinks.classList.toggle("nav__links--isactive");
 });
