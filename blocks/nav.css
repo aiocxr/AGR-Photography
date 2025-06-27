@@ -72,8 +72,7 @@
   }
 
   .nav-links {
-    flex-direction: column;
-    align-items: center;
+    display: none;
     background-color: black;
     position: absolute;
     top: 100%;
@@ -88,13 +87,15 @@
   }
 
   .nav-links.nav__links--isactive {
+    display: flex;
+    padding: 0;
     transform: translateX(0);
     opacity: 1;
     top: 0;
-    left: 0;
     bottom: 0;
-    right: 0;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     z-index: 2;
   }
 
